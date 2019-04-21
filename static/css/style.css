@@ -1,15 +1,80 @@
-html {
-    background-color: black;
+html, body {
+    margin: 0;
+    padding: 0;
 }
 
-body {
-    color: lightgray;
+header {
+    background: #111;
+    padding: 5vh 5vh 7vh 5vh;
 }
 
-.bg-video {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
-  }
+header img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    height: auto;
+}
+
+nav {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background-color: #111; 
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-align: center;
+    border-top: 2px solid #a46;
+    border-bottom: 2px solid #a46;  
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: #333;
+}
+
+/* phone only */
+@media screen and (max-width: 599px) {
+    nav ul li {
+        display: block;
+        float: none;
+    }
+}
+
+/* tablet portrait and up */
+@media (min-width: 600px) {
+
+}
+
+/* tablet landscape and up */
+@media (min-width: 900px) {
+
+}
+
+/* desktop and up */
+@media (min-width: 1200px) {
+
+}
+
+/* big desktop and up */
+@media (min-width: 1200px) {
+
+}
