@@ -1,6 +1,19 @@
 html, body {
     margin: 0;
     padding: 0;
+    background-color: #66666C;
+}
+
+main {
+    text-align: center;
+}
+
+table, th, td {
+  border-collapse: collapse;
+}
+
+th, td {
+  text-align: left;
 }
 
 header {
@@ -23,7 +36,7 @@ nav {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
-    background-color: #111; 
+    background-color: #111;
 }
 
 nav ul {
@@ -32,7 +45,7 @@ nav ul {
     list-style-type: none;
     text-align: center;
     border-top: 2px solid #a46;
-    border-bottom: 2px solid #a46;  
+    border-bottom: 2px solid #a46;
 }
 
 nav ul li {
