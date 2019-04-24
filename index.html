@@ -6,19 +6,7 @@
     <title>The OA</title>
 
     <link rel="stylesheet" href="static/css/style.css">
-    <script>
-        var API_URL = 'https://api.themoviedb.org/3/tv/69061?api_key=7e41f8c308e8c9521fbd018d53440a05';
-        fetch(API_URL)
-            .then(response => response.json())
-            .then(data => {
-                console.log(data);
-                for (var season of data.seasons) {
-                    console.log(season);
-                }
-            })
-            .catch(error => {
-                console.error(error.message);
-            });
+    <script src="static/js/dom.js">
     </script>
 </head>
 <body>
@@ -34,57 +22,24 @@
         </ul>
     </nav>
     <main>
-        <div class="container">
-            <div class="season-container-poster-left">
-                <div class="season-title">
-                    <h4>PART I</h4>
-                </div>
-                <div class="season-poster">
-                    <img
-                        src="http://image.tmdb.org/t/p/original/gNLjLZZp9dZ8oUDd90Mf8xaKglb.jpg"
-                        alt="Part I poster.">
-                </div>
-                <div class="season-overview">
-                    <p>
-                        Seven years after vanishing from her home, a young woman returns
-                        with mysterious new abilities and recruits five strangers for a
-                        secret mission.
-                    </p>
-                    <p>
-                        <strong>Episodios: </strong> 8
-                    </p>
-                    <p>
-                        <strong>Estreia: </strong> 2016-12-16
-                    </p>
-                </div>
-            </div>
-            <div class="season-container-poster-right">
-                <div class="season-title">
-                    <h4>PART II</h4>
-                </div>
-                <div class="season-poster">
-                    <img
-                        src="http://image.tmdb.org/t/p/original/tTPu0drneFbUPswym2pXbKNZrO3.jpg"
-                        alt="Part II poster.">
-                </div>
-                <div class="season-overview">
-                    <p>
-                        After waking up to a new life in San Francisco, OA is drawn into
-                        a search for a missing teen and begins to encounter familiar
-                        faces from her past.
-                    </p>
-                    <p>
-                        <strong>Episodios: </strong> 8
-                    </p>
-                    <p>
-                        <strong>Estreia: </strong> 2019-03-22
-                    </p>
-                </div>
-            </div>
+        <div id="seasons" class="container">
         </div>
     </main>
     <footer>
       <p>Por: Lucas Avila (111136) e Renan Tarouco (108331)</p>
     </footer>
+    <script>
+        fetch(`${env.API_BASE_URL}/tv/69061?api_key=7e41f8c308e8c9521fbd018d53440a05&language=en-US`)
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+                for (var season of data.seasons) {
+                    addSeasonComponent(season, 'left');
+                }
+            })
+            .catch(error => {
+                console.error(error.message);
+            });
+    </script>
 </body>
 </html>
