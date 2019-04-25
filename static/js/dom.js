@@ -6,7 +6,7 @@ const env = {
 
 function addSeasonComponent(season, posterPosition) {
     let seasonComponentHTML =
-    `<div class="season-container-poster-${posterPosition}">
+    `<article class="season-container-poster-${posterPosition}">
         <div class="season-title">
             <h2 style="text-align:center;">${season.name}</h2>
         </div>
@@ -26,7 +26,7 @@ function addSeasonComponent(season, posterPosition) {
                 <strong>Estreia: </strong> ${season.air_date}
             </p>
         </div>
-    </div>`;
+    </article>`;
     let seasonComponent = document.createElement('div');
     seasonComponent.innerHTML = seasonComponentHTML;
 
