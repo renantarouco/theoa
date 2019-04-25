@@ -52,6 +52,10 @@ nav ul li a:hover {
     background-color: #333;
 }
 
+main h1 {
+  text-align: center;
+}
+
 footer {
   margin: 0;
   padding: 0;
