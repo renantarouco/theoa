@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The OA</title>
+
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+    <header>
+        <img src="static/img/logo.png" alt="The OA's logo.">
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="elenco.html">Elenco</a></li>
+            <li><a href="epis.html">Episódios</a></li>
+            <li><a href="#">Newsletter</a></li>
+        </ul>
+    </nav>
+    <main class="news">
+      <h1>Acompanhe todas as novidades sobre The OA pelo seu Email</h1>
+      <section id="dados">
+        <form onsubmit="return false" method="post">
+          <fieldset style="text-align:center;">
+            <legend>Insira seus dados abaixo:</legend>
+            Nome: <input type="text" name="nome" size="40" required> <br><br>
+            Email: <input type="email" name="email" size="40" required> <br><br>
+            Data de Nascimento: <input type="date" name="nascimento" required> <br><br>
+            Identidade de Gênero:
+            <select name="Genero">
+              <option value="0">Não binário</option>
+              <option value="1">Homem Cisgênero</option>
+              <option value="2">Mulher Cisgênero</option>
+              <option value="3">Homem Transexual</option>
+              <option value="4">Mulher Transexual</option>
+              <option value="5">Outro</option>
+            </select> <br><br>
+            Personagem Favorito: <input type="text" name="personagem"> <br><br>
+            <input type="submit" value="Enviar" onclick='document.getElementById("dados").innerHTML = "<p>Inscrito no Newsletter com sucesso!</p>"'>
+          </fieldset>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <p>Por: Lucas Avila (111136) e Renan Tarouco (108331)</p>
+    </footer>
+</body>
+</html>
