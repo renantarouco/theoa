@@ -56,6 +56,34 @@ main h1 {
   text-align: center;
 }
 
+.flex-container {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+
+  -webkit-flex-flow: row wrap;
+  align-items: stretch;
+}
+
+.pic {
+  padding: 5px;
+}
+
+.pic img {
+  width: 250px;
+  height: auto;
+}
+
+.act {
+  align-self: baseline;
+}
+
 footer {
   margin: 0;
   padding: 0;
@@ -84,10 +112,24 @@ footer p {
         max-width: 100%;
         height: auto;
     }
+    .flex-container {
+      justify-content: center;
+    }
+    .act {
+      text-align: center;
+      padding-top: 0px;
+      padding-bottom: 30px;
+    }
 }
 
 /* tablet portrait and up */
 @media (min-width: 600px) {
+  .flex-container {
+    justify-content: center;
+  }
+  .act {
+    padding-left: 10px;
+  }
   .season-poster img {
       max-width: 50%;
       height: auto;
@@ -139,14 +181,32 @@ footer p {
     }
 }
 
-/* desktop and up */
-@media (min-width: 1200px) {
-
+@media (min-width: 837px) {
+  .pic {
+    padding-left: 100px;
+  }
 }
 
-/* big desktop and up */
-@media (min-width: 1200px) {
+@media (min-width: 1027px) {
+  .pic {
+    padding-left: 150px;
+  }
+}
 
+@media (min-width: 1127px) {
+  .pic {
+    padding-left: 200px;
+  }
+}
+
+/* desktop and up */
+@media (min-width: 1227px) {
+  .act {
+    padding: 10px;
+  }
+  .pic {
+    padding-left: 0px;
+  }
 }
 
 /*
