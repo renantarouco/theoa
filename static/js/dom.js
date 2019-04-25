@@ -8,7 +8,7 @@ function addSeasonComponent(season, posterPosition) {
     let seasonComponentHTML =
     `<div class="season-container-poster-${posterPosition}">
         <div class="season-title">
-            <h4>${season.name}</h4>
+            <h2 style="text-align:center;">${season.name}</h2>
         </div>
         <div class="season-poster">
             <img

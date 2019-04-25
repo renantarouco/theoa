@@ -108,6 +108,10 @@ footer p {
         display: block;
         float: none;
     }
+    .season-container-poster-left {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
     .season-poster img {
         max-width: 100%;
         height: auto;
@@ -129,6 +133,10 @@ footer p {
   }
   .act {
     padding-left: 10px;
+  }
+  .season-container-poster-left {
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
   .season-poster img {
       max-width: 50%;
