@@ -217,6 +217,9 @@ footer p {
 
 /* desktop and up */
 @media (min-width: 1227px) {
+  .flex-container {
+    justify-content: space-between;
+  }
   .act {
     padding: 10px;
   }
