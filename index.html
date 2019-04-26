@@ -4,10 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The OA</title>
-
-    <link rel="stylesheet" href="static/css/style.css">
-    <script src="static/js/dom.js">
-    </script>
+    <link rel="stylesheet" href="static/css/base.css">
 </head>
 <body>
     <header>
@@ -15,26 +12,30 @@
     </header>
     <nav>
         <ul>
-            <li><a href="#">Inicio</a></li>
-            <li><a href="elenco.html">Elenco</a></li>
-            <li><a href="epis.html">Episódios</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="elenco.html">Cast</a></li>
+            <li><a href="epis.html">Episodes</a></li>
             <li><a href="news.html">Newsletter</a></li>
         </ul>
     </nav>
     <main>
-        <section id="seasons" class="container">
+        <section id="seasons-list-container" class="container">
         </section>
     </main>
     <footer>
-      <p>Por: Lucas Avila (111136) e Renan Tarouco (108331) </p>
+        <p>Por: Lucas Avila (111136) e Renan Tarouco (108331) </p>
     </footer>
+    <script src="static/js/tmdb.js"></script>
+    <script src="static/js/components.js"></script>
     <script>
-        fetch(`${env.API_BASE_URL}/tv/69061?api_key=7e41f8c308e8c9521fbd018d53440a05&language=en-US`)
-            .then(response => response.json())
-            .then(data => {
-                console.log(data);
-                for (var season of data.seasons) {
-                    addSeasonComponent(season, 'left');
+        retrieveTVShowSeasonsList(69061)
+            .then(seasonsList => {
+                for (let i = 0; i < seasonsList.length; ++i) {
+                    addSeasonDetailComponent(
+                        'seasons-list-container',
+                        seasonsList[i],
+                        (i % 2 == 0) ? 'left' : 'right'
+                    );
                 }
             })
             .catch(error => {
