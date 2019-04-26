@@ -4,14 +4,14 @@ function addSeasonDetailComponent(parentElement, season, posterPosition) {
     let seasonComponentHTML =
     `
     <div class="season-name">
-        <h3>${season.name}</h3>
+        <strong>${season.name.toUpperCase()}</strong>
     </div>
     <div class="season-air-date">
         <strong>${season.air_date}</strong>
     </div>
     <div class="season-poster">
         <img
-            src="${IMAGE_BASE_URL}/original${season.poster_path}"
+            src="${IMAGES_BASE_URL}/original${season.poster_path}"
             alt="${season.name}'s poster.">
     </div>
     <div class="season-overview">
@@ -30,7 +30,7 @@ function addSeasonDetailComponent(parentElement, season, posterPosition) {
     `;
 
     let seasonComponent = document.createElement('article');
-    seasonComponent.classList.add('season-detail-container', `poster-${posterPosition}`);
+    seasonComponent.classList.add('season-detail-container', `season-poster-${posterPosition}`);
     seasonComponent.innerHTML = seasonComponentHTML;
 
     document.getElementById(parentElement).appendChild(seasonComponent);

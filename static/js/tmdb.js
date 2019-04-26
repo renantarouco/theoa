@@ -7,7 +7,7 @@ function retrieveTVShowDetail(id) {
 }
 
 function retrieveTVShowSeasonsList(id) {
-    return retrieveTVShow(id)
+    return retrieveTVShowDetail(id)
         .then(tvShow => tvShow.seasons);
 }
 

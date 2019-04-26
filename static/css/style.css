@@ -178,7 +178,7 @@ footer p {
         grid-template-rows: auto;
         grid-template-areas:
             "poster title"
-            "poster overview"
+            "poster overview";
     }
 
     .season-container-poster-right {
@@ -188,7 +188,7 @@ footer p {
         grid-template-rows: 1fr 3fr;
         grid-template-areas:
             "title poster"
-            "overview poster"
+            "overview poster";
     }
 
     .season-poster img {

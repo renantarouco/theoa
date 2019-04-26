@@ -1,1 +1,51 @@
-.season-detail-container
+.season-name {
+    grid-area: name;
+    align-self: center;
+    justify-self: start;
+}
+
+.season-air-date {
+    grid-area: air-date;
+    align-self: center;
+    justify-self: end;
+}
+
+.season-poster {
+    grid-area: poster;
+}
+
+.season-poster img {
+    max-width: 100%;
+    height: auto;
+}
+
+.season-overview {
+    grid-area: overview;
+}
+
+.season-episodes-list {
+    grid-area: episodes-list;
+}
+
+.season-detail-container {
+    display: grid;
+    grid-template-rows: auto;
+    gap: 5vh 10vh;
+    border: 1px solid brown;
+}
+
+.season-poster-left {
+    grid-template-columns: 1fr 7fr;
+    grid-template-areas:
+        "name air-date"
+        "poster overview"
+        "poster episodes-list"
+}
+
+.season-poster-right {
+    grid-template-columns: 7fr 1fr;
+    grid-template-areas:
+        "name air-date"
+        "overview poster"
+        "episodes-list poster"
+}
