@@ -49,3 +49,38 @@
         "overview poster"
         "episodes-list poster"
 }
+
+.season-card-header {
+    grid-area: header;
+    background-color: aqua;
+}
+
+.season-card-poster {
+    grid-area: poster;
+    background-color: brown;
+}
+
+.season-card-content {
+    grid-area: content;
+    background-color: chartreuse;
+}
+
+.season-card {
+    display: grid;
+    grid-template-rows: auto;
+}
+
+.season-card-poster-left {
+    grid-template-columns: 1fr 7fr;
+    grid-template-areas:
+        "name air-date"
+        "poster overview"
+        "poster episodes-list";
+}
+
+.season-card-poster-right {
+    grid-template-columns: 7fr 1fr;
+    grid-template-areas:
+        "header header"
+        "poster content";
+}

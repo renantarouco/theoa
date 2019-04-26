@@ -1,7 +1,6 @@
 html, body {
     margin: 0;
     padding: 0;
-    background-color: #66666C;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -72,7 +71,7 @@ footer p {
 
 .container {
     max-width: 100%;
-    margin: 10vh 35vh 10vh 35vh;
+    margin: 5vh 35vh 5vh 35vh;
 }
 
 /* phone only */

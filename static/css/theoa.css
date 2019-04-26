@@ -1,0 +1,71 @@
+.card {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: auto;
+    gap: 1vh 0;
+    grid-template-areas:
+        "header"
+        "content";
+}
+
+.card > .card-header {
+    grid-area: header;
+    align-self: center;
+    padding: 0 0 0 5vh;
+    background-color: #db0000;
+    color: #ffffff;
+    border-radius: 1vh 1vh 0 0;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: auto;
+    grid-template-areas:
+        "title subtitle";
+}
+
+.card > .card-content {
+    grid-area: content;
+    background-color: #564d4d;
+    border-radius: 0 0 1vh 1vh;
+    color: #fff;
+    padding: 2vh;
+    display: grid;
+    grid-template-rows: auto;
+    gap: 0 2vh;
+}
+
+.card > .poster-left {
+    padding-left: 3vh;
+    grid-template-columns: 2fr 10fr;
+    grid-template-areas:
+        "poster body";
+}
+
+.card > .poster-right {
+    grid-template-columns: 10fr 2fr;
+    grid-template-areas:
+        "body poster";
+}
+
+.card-header > .card-header-title {
+    grid-area: title;
+}
+
+.card-header > .card-header-subtitle {
+    grid-area: subtitle;
+    align-self: center;
+    justify-self: end;
+    padding-right: 2vh;
+}
+
+.card-content > .card-content-poster {
+    grid-area: poster;
+}
+
+.card-content > .card-content-poster img {
+    max-width: 100%;
+    height: auto;
+}
+
+.card-content > .card-content-body {
+    grid-area: body;
+}
