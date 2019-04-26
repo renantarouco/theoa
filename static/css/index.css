@@ -1,86 +1,23 @@
-.season-name {
-    grid-area: name;
-    align-self: center;
-    justify-self: start;
+.card-content-body {
+    display: grid;
+    grid-template-columns: 6fr 6fr;
+    grid-template-rows: auto;
+    gap: 0 2vh;
+    grid-template-areas:
+        "overview episodes";
 }
 
-.season-air-date {
-    grid-area: air-date;
-    align-self: center;
-    justify-self: end;
-}
-
-.season-poster {
-    grid-area: poster;
-}
-
-.season-poster img {
-    max-width: 100%;
-    height: auto;
-}
-
-.season-overview {
+.card-content-body > .season-overview {
     grid-area: overview;
+    padding: 2vh;
 }
 
-.season-episodes-list {
-    grid-area: episodes-list;
+.card-content-body > .season-overview p {
+    text-align: justify;
 }
 
-.season-detail-container {
-    display: grid;
-    grid-template-rows: auto;
-    gap: 5vh 10vh;
-    border: 1px solid brown;
-}
 
-.season-poster-left {
-    grid-template-columns: 1fr 7fr;
-    grid-template-areas:
-        "name air-date"
-        "poster overview"
-        "poster episodes-list"
-}
-
-.season-poster-right {
-    grid-template-columns: 7fr 1fr;
-    grid-template-areas:
-        "name air-date"
-        "overview poster"
-        "episodes-list poster"
-}
-
-.season-card-header {
-    grid-area: header;
-    background-color: aqua;
-}
-
-.season-card-poster {
-    grid-area: poster;
-    background-color: brown;
-}
-
-.season-card-content {
-    grid-area: content;
-    background-color: chartreuse;
-}
-
-.season-card {
-    display: grid;
-    grid-template-rows: auto;
-}
-
-.season-card-poster-left {
-    grid-template-columns: 1fr 7fr;
-    grid-template-areas:
-        "name air-date"
-        "poster overview"
-        "poster episodes-list";
-}
-
-.season-card-poster-right {
-    grid-template-columns: 7fr 1fr;
-    grid-template-areas:
-        "header header"
-        "poster content";
+.card-content-body > .season-episodes {
+    grid-area: episodes;
+    padding: 2vh;
 }
