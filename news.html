@@ -13,38 +13,38 @@
     </header>
     <nav>
         <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="elenco.html">Elenco</a></li>
-            <li><a href="epis.html">Episódios</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="cast.html">Cast</a></li>
+            <li><a href="epis.html">Episodes</a></li>
             <li><a href="#">Newsletter</a></li>
         </ul>
     </nav>
     <main class="news">
-      <h1>Acompanhe todas as novidades sobre The OA pelo seu Email</h1>
-      <section id="dados">
+      <h1>Get all the news on your Email</h1>
+      <section id="data">
         <form onsubmit="return false" method="post">
           <fieldset style="text-align:center;">
-            <legend>Insira seus dados abaixo:</legend>
-            Nome: <input type="text" name="nome" size="35" required> <br><br>
+            <legend>Put your personal data bellow:</legend>
+            Name: <input type="text" name="name" size="35" required> <br><br>
             Email: <input type="email" name="email" size="35" required> <br><br>
-            Data de Nascimento: <input type="date" name="nascimento" required> <br><br>
-            Identidade de Gênero:
-            <select name="Genero">
-              <option value="0">Não binário</option>
-              <option value="1">Homem Cisgênero</option>
-              <option value="2">Mulher Cisgênero</option>
-              <option value="3">Homem Transexual</option>
-              <option value="4">Mulher Transexual</option>
-              <option value="5">Outro</option>
+            Birthday: <input type="date" name="birthday" required> <br><br>
+            Gender Identity:
+            <select name="Gender">
+              <option value="0">Non-binary</option>
+              <option value="1">Cisgender Man</option>
+              <option value="2">Cisgender Woman</option>
+              <option value="3">Transgender Man</option>
+              <option value="4">Transgender Woman</option>
+              <option value="5">Another</option>
             </select> <br><br>
-            Personagem Favorito: <input type="text" name="personagem"> <br><br>
-            <input type="submit" value="Enviar" onclick='document.getElementById("dados").innerHTML = "<p>Inscrito no Newsletter com sucesso!</p>"'>
+            Favorite Character: <input type="text" name="character"> <br><br>
+            <input type="submit" value="Send" onclick='document.getElementById("data").innerHTML = "<p>Subscribe successfully!</p>"'>
           </fieldset>
         </form>
       </section>
     </main>
     <footer>
-      <p>Por: Lucas Avila (111136) e Renan Tarouco (108331)</p>
+      <p>By: Lucas Avila (111136) and Renan Tarouco (108331)</p>
     </footer>
 </body>
 </html>
