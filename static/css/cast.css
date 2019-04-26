@@ -3,8 +3,8 @@ main h1 {
 }
 
 .flex-container {
-  padding: 0;
-  margin: 0;
+  padding: 10px;
+  margin: auto;
   list-style: none;
 
   display: -webkit-box;
@@ -17,9 +17,63 @@ main h1 {
   align-items: stretch;
 }
 
+.flex-item {
+  padding: 5px;
+}
 
+.flex-item .card .poster-left {
+  padding-left: 1vh;
+  grid-template-columns: 4fr 2fr;
+}
 
-.flex-item img {
-  width: 250px;
-  height: auto;
+.flex-item .card .card-content {
+  grid-template-rows: 25%;
+}
+
+.flex-item .card .card-content .card-content-body {
+  padding-right: 2px;
+}
+
+@media screen and (max-width: 600px) {
+  .flex-item {
+    flex: 0 1 100%;
+  }
+
+  .flex-item .card .poster-left {
+    padding: 1vh;
+    grid-template-rows: auto;
+    grid-template-columns: auto;
+    grid-template-areas:
+      "poster"
+      "body";
+  }
+
+  .flex-item .card-content-body {
+    text-align: center;
+    margin: auto;
+  }
+  .flex-item .card-content-poster {
+    text-align: center;
+    margin: auto;
+  }
+}
+
+@media (min-width: 600px) {
+  .flex-container {
+      justify-content: space-evenly;
+  }
+
+  .flex-item {
+    flex: 0 1 44%;
+  }
+}
+
+@media (min-width: 1100px) {
+  .flex-container {
+      justify-content: space-between;
+  }
+
+  .flex-item {
+    flex: 0 1 32%;
+  }
 }
