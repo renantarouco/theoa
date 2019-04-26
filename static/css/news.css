@@ -1,0 +1,11 @@
+main h1 {
+  text-align: center;
+}
+
+.news section {
+  font-weight: bold;
+}
+
+.news section p {
+  text-align: center;
+}
