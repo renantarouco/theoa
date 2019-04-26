@@ -73,7 +73,6 @@ footer p {
 
 .container {
     max-width: 100%;
-    margin: 5vh 35vh 5vh 35vh;
 }
 
 /* phone only */
@@ -81,5 +80,11 @@ footer p {
     nav ul li {
         display: block;
         float: none;
+    }
+}
+
+@media (min-width: 600px) {
+    .container {
+        margin: 5vh 35vh 5vh 35vh;
     }
 }
