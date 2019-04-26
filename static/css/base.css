@@ -2,6 +2,7 @@ html, body {
     margin: 0;
     padding: 0;
     background-color: #66666C;
+    background-image: url("static/img/background.png");
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
