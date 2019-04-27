@@ -75,6 +75,11 @@ footer p {
     max-width: 100%;
 }
 
+.default-header {
+    border: 1px solid #831010;
+    color: #831010;
+}
+
 /* phone only */
 @media screen and (max-width: 599px) {
     nav ul li {
@@ -85,10 +90,21 @@ footer p {
     .container {
         margin: 3vh 1vh 3vh 1vh;
     }
+
+    .default-header {
+        text-align: center;
+        padding: 1vh 0 1vh 0;
+        border-radius: 1vh;
+    }
 }
 
 @media (min-width: 600px) {
     .container {
         margin: 5vh 35vh 5vh 35vh;
+    }
+
+    .default-header {
+        padding: 2vh 0 2vh 2vh;
+        border-radius: 1vh;
     }
 }

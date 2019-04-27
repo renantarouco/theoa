@@ -20,13 +20,13 @@
         </ul>
     </nav>
     <main class="news">
-      <h1>Get all the news on your Email</h1>
-      <section id="data">
-        <form onsubmit="return false" method="post">
+      <section id="data" class="container">
+        <h1 class="default-header">SUBSCRIBE</h1>
+        <form onsubmit="this.reset(); alert('Thanks for your subscription.')" method="post">
           <fieldset style="text-align:center;">
             <legend>Put your personal data bellow:</legend>
-            Name: <input type="text" name="name" size="35" required> <br><br>
-            Email: <input type="email" name="email" size="35" required> <br><br>
+            Name: <input type="text" name="name" required> <br><br>
+            Email: <input type="email" name="email" required> <br><br>
             Birthday: <input type="date" name="birthday" required> <br><br>
             Gender Identity:
             <select name="Gender">
@@ -38,7 +38,7 @@
               <option value="5">Another</option>
             </select> <br><br>
             Favorite Character: <input type="text" name="character"> <br><br>
-            <input type="submit" value="Send" onclick='document.getElementById("data").innerHTML = "<p>Subscribe successfully!</p>"'>
+            <input type="submit" value="Send" onclick='formReset()'>
           </fieldset>
         </form>
       </section>
@@ -46,5 +46,7 @@
     <footer>
       <p>By: Lucas Avila (111136) and Renan Tarouco (108331)</p>
     </footer>
+    <script>
+    </script>
 </body>
 </html>
