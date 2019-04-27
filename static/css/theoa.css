@@ -35,7 +35,6 @@
 .card-header > .card-header-subtitle {
     grid-area: subtitle;
     align-self: center;
-    justify-self: end;
 }
 
 .card-content > .card-content-poster {
@@ -64,6 +63,7 @@
     }
 
     .card-header > .card-header-subtitle {
+        justify-self: center;
         padding-bottom: 2vh;
     }
 
@@ -93,7 +93,7 @@
     }
 
     .card-header > .card-header-subtitle {
-        padding-right: 2vh;
+        padding-right: 5vh;
     }
     
     .card > .poster-left {
@@ -110,6 +110,6 @@
     
     .card-header > .card-header-subtitle {
         justify-self: end;
-        padding-right: 2vh;
+        padding-right: 4vh;
     }
 }

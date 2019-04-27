@@ -81,6 +81,10 @@ footer p {
         display: block;
         float: none;
     }
+
+    .container {
+        margin: 3vh 1vh 3vh 1vh;
+    }
 }
 
 @media (min-width: 600px) {

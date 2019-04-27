@@ -21,80 +21,38 @@
         </ul>
     </nav>
     <main>
-        <section id="seasons-list-container" class="container">
-            <div class="card">
-                <div class="card-header">
-                    <div class="card-header-title">
-                        <h3>PART I</h3>
-                    </div>
-                    <div class="card-header-subtitle">
-                        06-12-2016
-                    </div>
-                </div>
-                <div class="card-content poster-left">
-                    <div class="card-content-poster">
-                        <img
-                            src="https://image.tmdb.org/t/p/original/ppSiYu2D0nw6KNF0kf5lKDxOGRR.jpg"
-                            alt="The OA's poster.">
-                    </div>
-                    <div class="card-content-body">
-                        <section class="season-overview">
-                            <h2>Overview</h2>
-                            <p>
-                                Prairie Johnson, blind as a child, comes home to the
-                                community she grew up in with her sight restored.
-                                Some hail her a miracle, others a dangerous mystery,
-                                but Prairie won’t talk with the FBI or her parents about
-                                the seven years she went missing.
-                            </p>
-                        </section>
-                        <section class="season-episodes">
-                            <table>
-                                <thead>
-                                    <tr style="background-color: #564d4d">
-                                        <th style="text-align: center">#</th>
-                                        <th style="text-align: left">NAME</th>
-                                        <th></th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td style="text-align: center">1</td>
-                                        <td>Homecoming</td>
-                                        <td>7.789</td>
-                                    </tr>
-                                    <tr>
-                                        <td style="text-align: center">2</td>
-                                        <td>Test done</td>
-                                        <td>7.789</td>
-                                    </tr>
-                                    <tr>
-                                        <td style="text-align: center">3</td>
-                                        <td>Episode unknown</td>
-                                        <td>7.789</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </section>
-                    </div>
-                </div>
+            <div class='container embed-container'>
+                <iframe
+                    src='https://www.youtube.com/embed/DvHJtez2IlY'
+                    frameborder='0'
+                    allowfullscreen>
+                </iframe>
             </div>
+        <section id="seasons-list-container" class="container">
         </section>
     </main>
     <footer>
         <p>By: Lucas Avila (111136) and Renan Tarouco (108331) </p>
     </footer>
-    <!--<script src="static/js/tmdb.js"></script>
+    <script src="static/js/tmdb.js"></script>
     <script src="static/js/components.js"></script>
     <script>
         retrieveTVShowSeasonsList(69061)
             .then(seasonsList => {
                 for (let i = 0; i < seasonsList.length; ++i) {
+                    let season = seasonsList[i];
                     addSeasonDetailComponent(
                         'seasons-list-container',
-                        seasonsList[i],
+                        season,
                         (i % 2 == 0) ? 'left' : 'right'
                     );
+                    retrieveSeasonEpisodesList(69061, season.season_number)
+                        .then(episodesList => {
+                            addSeasonEpisodesListComponent(season.season_number, episodesList);
+                        })
+                        .catch(error => {
+                            console.error(error.message);
+                        });
                 }
             })
             .catch(error => {

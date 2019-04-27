@@ -12,7 +12,7 @@ function retrieveTVShowSeasonsList(id) {
 }
 
 function retrieveSeasonDetail(id, seasonNumber) {
-    return fetch(`${SPI_BASE_URL}/tv/${id}/season/${seasonNumber}?api_key=${API_KEY}&language=en-US`)
+    return fetch(`${API_BASE_URL}/tv/${id}/season/${seasonNumber}?api_key=${API_KEY}&language=en-US`)
         .then(response => response.json());
 }
 
